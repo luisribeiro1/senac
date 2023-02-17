@@ -1,0 +1,326 @@
+/* importar font do Google Fonts */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
+
+/* CSS Reset */
+body,ul,ol,li,form,div,table,th,tr,td,h1,h2,h3,h4,h5,h6,p{
+    margin:  0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+body {
+    background-image: url(imagens/topo2.jpg), url(imagens/fundoRodape.png);
+    background-repeat: repeat-x, repeat-x;
+    background-position: left top, left bottom;
+    font-family: Arial, Verdana, Tahoma, sans-serif;
+    color: #333333;     /* cor da letra */
+}
+
+p{
+    margin:  15px 0px;      /* espaçamento entre parágrafos */   
+    line-height: 160%;      /* espaçamento entre linhas */
+    text-align: justify;    /* alinhamento justificado */
+    font-size: 17px;        /* Tamanho da letra */
+}       
+h1{
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;       /* Estilo da fonte */
+}
+h2{
+    font-size: 26px;
+    margin: 20px 0px 10px 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    position: relative;   /* mudar o padrão de posicionamento */
+    height: 160px;        /* altura*/
+    
+}
+.logo{
+    font-size: 36px;    /* Tamanho da Letra */
+    color: #ffffff;     /* cor da letra */
+    position: absolute; /* posicionamento absoluto */
+    top: 40px;          /* em relação a margem superior */
+    left: 0px;          /* em relação a margem esquerda */
+}
+
+nav{
+    margin-bottom: 50px;
+    background-color: rgba(34, 104, 144, 0.6);  /* transparência */
+    height: 40px;
+}
+nav ul{
+    list-style: none;   /* Tirar os marcadores */
+    width: 100%;
+}
+nav li{
+    float: left;        /* Coloca os elementos lado a lado */
+}
+nav li a{
+    color: #ffffff;
+    text-decoration: none;  /* Tira o sublinhado */
+    padding: 10px 24px;     /* Margem interna */
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+nav li a:hover{       /* comportamento do link (sobre) */
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+/* SITE OU CONTAINER PRINCIPAL */
+main{
+    width: 1000px;              /* largura do site */
+    margin: 0px auto 0px auto;          /* centralizar */
+}
+
+/* NAV OU NAVEGAÇÃO */
+aside{
+    width: 280px;
+    float: right;               /* flutuar para a direita */
+    min-height: 400px;
+    margin-bottom: 30px;
+}
+.menu{
+    background-color: #DCE4EC;
+    border-radius: 5px;         /* arredondar cantos */
+}
+.menu ul{
+    list-style: none;           /* tirar os marcadores */
+    padding: 10px 0px;          /* 10px sup e inf. 0px dir e esq */
+}
+.menu ul li a{
+    padding: 7px 20px;
+    text-decoration: none;      /* Tira o sublinhado */
+    display: block;             /* Muda o link para bloco */
+    color: #0099cc;             /* Cor do link */
+}
+.menu ul li a:hover {           /* comportamento do link (sobre) */
+    background-color: #000000;
+    color: #ffffff;
+}
+.redessociais{
+    border: 2px solid #DCE4EC;  /* Espessura, estilo e cor */    
+    border-radius: 5px;         /* Canto arredondado */
+    margin: 15px 0px;           /* Margin externa */
+    padding: 15px;              /* Margem interna */
+    text-align: center;         /* Alinhamento do conteúdo */
+}
+.fa-facebook-square{
+    color: #35619E;             /* Cor do ícone */
+    font-size: 40px !important; /* Tamanho */
+    margin-right: 30px;         /* Margem direita */
+}
+.fa-twitter{
+    color: #00B6F3;
+    font-size: 40px !important;
+    margin-right: 30px;
+}
+.fa-youtube-square{
+    color: #AA2A25;
+    font-size: 40px !important;
+}
+.boxsite{
+   background-color: #DCE4EC;
+   border-radius: 5px;
+   padding: 15px;
+   line-height: 150%;         /* Altura da linha ou espaçamento*/ 
+}                             /* entre linhas */
+
+footer{
+    clear: both;              /* Não flutuar. Usar após float */
+    font-size: 13px;        /* Tamanho da letra */
+    padding: 20px 0px;      /* Margem interna */
+    /*background-color:#DCE4EC;
+    border-top: 5px solid #0099cc;*/
+}
+/* SECTION OU CONTEÚDO */
+section{
+    width: 680px;               /* largura */
+    float: left;                /* flutuar p/ esquerda */
+    min-height: 400px;          /* altura mínima */
+    margin-bottom: 30px;
+}
+section ul{
+    padding-left: 17px;         /* Acerta o alinhamento da lista */
+}
+section ul li{
+    margin: 5px 0px;            /* Espaçamento entre os itens */
+}
+section .fotoD{
+    float: right;               /* Posiciona a imagem a direita */
+    margin:  10px 0px 10px 10px;
+}
+section .fotoE{
+    float: left;               /* Posiciona a imagem a direita */
+    margin:  10px 10px 10px 0px;
+}
+
+/* CLIENTES */
+.grid{
+    background-color: #D3D3D3;
+}
+.grid td{
+    background-color: #fff;
+    padding: 30px;
+}
+
+/* SERVIÇOS */
+
+.servicos h2{
+    clear: both;        /* Não flutuar */
+    padding-top: 20px;
+}
+
+.grid2{
+    width: 100%;                /* largura total da section */
+    border-collapse: collapse;  /* Retira o espaçamento entre células */
+}
+.grid2 th{
+    padding: 10px;              /* espaçamento interno */
+    background-color: #666;     /* fundo cinza */
+    color: #fff;                /* texto em branco */
+    text-align: left;     /* Alinha o texto a esquerda. O padrão é center */
+}
+.grid2 td{
+    padding: 10px;
+}
+.grid2 tr:nth-child(even){       /* odd = impar, even = par */
+    background-color: #E1E1E1;
+}
+
+/* PORTIFOLIO */
+.galeria a{
+    display: block;
+    float: left;
+    width: 165px;
+    height: 135px;
+}
+.galeria img{
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+/* CONTATO */
+
+#form1 label{
+    display: block;             /* Torna o label um bloco */   
+    width: 100px;              /* Fixa a largura em 100px */
+    float: left;                     /* Flutuar para a esquerda */
+}
+.campo{
+    padding: 5px;                               /* Margem interna */
+    border:  2px solid #DCE4EC;      /* Espessura, traço e cor */
+    background-color: #F8F8F8;      /* Cor de fundo */
+    width: 400px;
+}
+.combo{
+    padding: 3px;
+    border:  2px solid #DCE4EC;      
+    background-color: #F8F8F8;      
+}
+.botao{
+    border-style: none;                     /* Retira a borda */
+    background-color: #333;             /* Cor do fundo */
+    color: #fff;                                    /* Cor da letra */
+    padding: 6px 10px;                      /* Margem interna */
+    font-size: 17px;                            /* Aumenta o tamanho da letra */
+}
+.botao:hover{                /* Comportamento do mouse sobre um objeto*/
+    background-color: #000;
+}
+
+/* SLIDESHOW - HOME */
+
+#slideshow{
+    height: 320px;              /* Usar a altura da imagem */
+    clear: both;                    /* Evitar possível deslocamento */
+    position: relative;           /* Permite o empilhamento */
+    z-index: 0;                     /* Determina a ordem de empilhamento */
+}
+#slideshow span{
+    position: absolute;         /* Fixa a legenda em um local absoluto */
+    bottom: 0;                      /* na parte inferior do banner */
+    left: 0;                            /* e iniciando da esquerda para a direita */
+    z-index: 1;                     /* A legenda ficará em cima das imagens */
+    background-color: rgba(34,104,144,0.6);     /* Cor com transparência */
+    color: #FFF;                    /* Cor da letra */
+    display: block;                 /* Mostrar como bloco */
+    padding: 10px;                /* Margem interna */
+    width: 650px;                   /* Mesma largura da imagem */
+}
+#slideshow img,#slideshow span{
+    display: none;                  /* Ocultar */
+}
+#botoes{
+    text-align: center;             /* Alinhar os botões no centro */
+    margin: 8px 0px;              /* Deslocar 8px em cima e em baixo */
+}
+
+/* COLUNAS HOME */
+
+.coluna1,.coluna2{
+    float: left;                        /* flutuar para a esquerda */
+    width: 320px;                   /* Largura da coluna */
+    text-align: center;             /* Centraliza */
+}
+.coluna1{
+    margin-right: 30px;         /* Espaçamento entre colunas */
+}
+.coluna1 h2,.coluna2 h2{
+    background-color: #DCE4EC;
+    color: #0099CC;
+    padding: 10px 0px 5px 0px;
+    border-radius: 5px;                     /* arredondar cantos */
+    box-shadow: 4px 7px 0px #52d2fd;    /* Sombra */
+}
+
+/* NOTÍCIAS */
+
+.controles{
+    float: right;
+    width: 500px;
+}
+
+.controles2{
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #F8F8F8;
+    padding:5px;
+    font-size: 12px;
+}
+.controles2 span{
+    width: 150px;
+    float: right;
+    display: block;
+}
+
+.tamanho12{
+    font-size: 12px;
+}
+.tamanho14{
+    font-size: 14px;
+}
+.tamanho16{
+    font-size: 16px;
+}
+.tamanho18{
+    font-size: 18px;
+}
+.comentario{
+    background-color: #ebf0f5;
+    padding:  20px;
+    margin-bottom: 10px;
+}
+.alerta{
+    background-color: #E96152;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+

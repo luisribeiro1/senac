@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 2022 - Textos</title>
+    <link href="estilo.css" rel="stylesheet">
+    <style>
+        .fotinha{
+              width: 50px;
+        }
+  </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Javascript - Lista de deputados</h1>
+        </header>
+        <article>
+            <table class="tabela2" id="tabelaEleitores">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Partido</th>
+                    <th scope="col">UF</th>
+                    <th scope="col">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody id="lista">
+
+                </tbody>
+          </table>
+
+        </article>
+        <footer>
+            <small>&copy; 2022 - Meu site | Aulas de HTML e CSS</small>
+        </footer>
+    </section>
+
+    <script>
+
+        const url = (window.location.href).split("=");
+        
+        
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            const deputados = JSON.parse(this.responseText);
+            var tabela = "";
+            for(let x in deputados.dados){
+        
+                if(deputados.dados[x].siglaUf==url[1]){
+
+                    link = `<a href='deputadoDetalhes.html?id=${deputados.dados[x].id}'> Detalhes</a>`;
+
+                    tabela = tabela + "<tr>\
+                    <td class=''><img src=" + deputados.dados[x].urlFoto + " class='fotinha'></td>\
+                    <td class='align-middle fs-5'>"+ deputados.dados[x].nome +"</td>\
+                    <td class='align-middle fs-5'>" + deputados.dados[x].siglaPartido + "</td>\
+                    <td class='align-middle fs-5'>" + deputados.dados[x].siglaUf + "</td>\
+                    <td class='align-middle'>" + link + "</td>\
+                    </tr>";                
+                }
+            }
+            document.getElementById("lista").innerHTML = tabela;
+            
+        };
+        xmlhttp.open("GET", "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome");
+        xmlhttp.send();
+    </script>
+
+</body>
+</html>

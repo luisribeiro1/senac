@@ -1,0 +1,14 @@
+HTML e CSS:
+- site2022 (aulas)
+- siteLimeira (atividade)
+
+
+Javascript:
+- Calculadora simples
+- Calculadora completa
+- IMC
+- Conversão de moedas
+- BTUs
+- Álcool ou gasolina
+- Gerar tabuada
+

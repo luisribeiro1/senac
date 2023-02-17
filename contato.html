@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 2023 - Textos</title>
+    <link href="estilo.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Formulário de contato</h1>
+        </header>
+        <article>     
+            
+            <h2>Modelo 1</h2>
+            <form name="form1" id="form1" method="post" action="enviaContato.php">
+                <p>Preencha os campos abaixo:</p>
+
+                <p>
+                    <label>Nome:</label>
+                    <input name="nome" id="nome" type="text" class="campo" required />
+                </p>
+                <p>
+                    <label>E-mail:</label>
+                    <input name="email" id="email" type="email" class="campo" required />
+                </p>
+                <p>
+                    <label>Sexo:</label>
+                    <input name="sexo" id="Masc" type="radio" value="Masc">Masculino
+                    <input name="sexo" id="Fem" type="radio" value="Fem">Feminino
+                </p>
+                <p>
+                    <label>Estado:</label>
+                    <select name="estado" id="estado" class="combo">
+                        <option>SP</option>
+                        <option selected>MG</option>
+                        <option>RJ</option>
+                        <option>ES</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Comentário:</label>
+                    <textarea name="comentario" id="comentario" 
+                    cols="45" rows="8" class="campo"></textarea>
+                </p>
+                <p>
+                    <label>&nbsp;</label>
+                    <input name="newsletter" id="newsletter" type="checkbox" value="sim" />
+                    Quero receber as novidades do site por email
+                </p>
+                <p>
+                    <label>&nbsp;</label>
+                    <input name="enviar" id="enviar" type="submit" 
+                    value="Enviar Dados" class="botao" />
+                </p>
+
+            </form>
+
+
+            <h2>Modelo 2</h2>
+            <form name="form2" id="form2" method="post" action="enviaContato.php">
+                <p>Preencha os campos abaixo:</p>
+
+                <p>
+                    <input name="nome" id="nome" type="text" class="campo" required placeholder="NOME:" />
+                </p>
+                <p>
+                    <input name="email" id="email" type="email" class="campo" required placeholder="E-MAIL:" />
+                </p>
+                <p>Sexo: 
+                    <input name="sexo" id="Masc" type="radio" value="Masc">Masculino
+                    <input name="sexo" id="Fem" type="radio" value="Fem">Feminino
+                </p>
+                <p>
+                    <select name="estado" id="estado" class="combo">
+                        <option>ESTADO</option>
+                        <option>SP</option>
+                        <option>MG</option>
+                        <option>RJ</option>
+                        <option>ES</option>
+                    </select>
+                </p>
+                <p>
+                    <textarea name="comentario" id="comentario" cols="45" rows="8" class="campo" placeholder="COMENTÁRIO:"></textarea>
+                </p>
+                <p>                
+                    <input name="newsletter" id="newsletter" type="checkbox" value="sim" /> Quero receber as novidades do site por email
+                </p>
+                <p>
+                    <input name="enviar" id="enviar" type="submit" value="Enviar Dados" class="botao" />
+                </p>
+
+            </form>
+
+
+            <p class="voltar"><a href="index.html">Voltar para o índice</a></p>
+        </article>
+        <footer>
+            <small>&copy; 2023 - Meu site | Aulas de HTML e CSS</small>
+        </footer>
+    </section>
+</body>
+</html>
